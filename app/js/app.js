@@ -1,32 +1,33 @@
 (function () {
     var app = angular.module('calculator', []);
-    app.controller('KeysCtrl', function(){
-        this.numberArr = [7,8,9,4,5,6,1,2,3,0];
-        this.operatorArr = ["+","-","/","x"];
-        this.clickNumber = function(){
-            //alert(this.numberArr[1]);
+    app.controller('KeysCtrl', function($scope){
+        $scope.numberArr = [7,8,9,4,5,6,1,2,3,0];
+        $scope.operatorArr = ["+","-","/","x"];
+        $scope.inputText = "";
+        $scope.clickNumber = function(buttonVal){
+            $scope.inputText += buttonVal;
         };
-    });
-    app.directive('calculatorDisplay', function(){
+        $scope.clerScreen = function(){
+            $scope.inputText = "";
+        };
+    })
+    .directive('calculatorDisplay', function(){
         return {
             restrict: 'E',
             templateUrl: 'calculator-display.html'
         };
-    });
-    app.directive('calculatorKeys', function(){
+    })
+    .directive('calculatorKeys', function(){
         return {
             restrict: 'E',
-            templateUrl: 'calculator-keys.html',
-            controller: function($scope){
-                $scope.numberArr = [7,8,9,4,5,6,1,2,3,0];
-                $scope.operatorArr = ["+","-","/","x"];
-            }
+            templateUrl: 'calculator-keys.html'
         };
-    });
-    app.directive('calculatorWidget', function(){
+    })
+    .directive('calculatorWidget', function(){
         return {
             restrict: 'E',
-            templateUrl: 'calculator-widget.html'
+            templateUrl: 'calculator-widget.html',
+            controller: 'KeysCtrl'
         };
     });
 })();

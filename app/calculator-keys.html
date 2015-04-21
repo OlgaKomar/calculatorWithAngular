@@ -1,10 +1,10 @@
-      <div class="keys container">
-            <div class="numbers_container col-sm-10">
-                <span class="number col-sm-4" ng-repeat="number in numberArr">{{number}}</span>
-                <span class="dot col-sm-4">.</span>
-                <span class="eval col-sm-4">=</span>
-            </div>
-            <div class="operators_container col-sm-2">
-                <span class="operator col-sm-12" ng-repeat="operator in operatorArr">{{operator}}</span>
-            </div>
+<div class="keys container">
+      <div class="numbers_container col-sm-10">
+          <span class="number col-sm-4" ng-click="clickNumber(number)" ng-repeat="number in numberArr">{{number}}</span>
+          <span class="dot col-sm-4" ng-click="clickNumber(ngValue)">.</span>
+          <span class="eval col-sm-4">=</span>
       </div>
+      <div class="operators_container col-sm-2">
+          <span class="operator col-sm-12" ng-click="clickNumber(operator)" ng-repeat="operator in operatorArr">{{operator}}</span>
+      </div>
+</div>
