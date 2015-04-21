@@ -60,7 +60,6 @@
             });
         };
         $scope.executeCalc = function(){
-
             var sum = 0,
                 arrValues = $scope.arrValues;
 
@@ -74,6 +73,10 @@
             arrValues = [];
             return (!(typeof sum === "number") || isNaN(sum)) ? 
                 $scope.inputText = "NaN" : $scope.inputText = sum;
+        };
+        $scope.calculatorEval = function () {
+            $scope.transformTextIntoNumbers();
+            $scope.executeCalc();
         }
     })
     .directive('calculatorDisplay', function(){
