@@ -77,7 +77,7 @@
         $scope.calculatorEval = function () {
             $scope.transformTextIntoNumbers();
             $scope.executeCalc();
-        }
+        };
     })
     .directive('calculatorDisplay', function(){
         return {
