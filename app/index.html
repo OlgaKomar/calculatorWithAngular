@@ -2,11 +2,13 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/main.css">
-    <script type="text/javascript" src="js/findem.js"></script>
+    <link rel="stylesheet" href="scripts/calculator/styles/main.css">
+    <script type="text/javascript" src="scripts/vendor/angular.js"></script>
+    <script type="text/javascript" src="scripts/mainbf.js"></script>
   </head>
   <body ng-app="calculator">
-    <!-- calculator -->
+    <nav-bar></nav-bar>
+    <div ng-view></div>
     <calculator-widget></calculator-widget>
   </body>
 </html>

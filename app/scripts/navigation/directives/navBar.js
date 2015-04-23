@@ -3,7 +3,7 @@
     module.exports = function () {
         return {
             restrict: 'E',
-            templateUrl: './js/directives/calculator-widget.html',
-            controller: 'KeysCtrl'
+            templateUrl: './scripts/navigation/directives/nav-bar.html',
+            controller: 'NavBarCtrl'
         };
     };

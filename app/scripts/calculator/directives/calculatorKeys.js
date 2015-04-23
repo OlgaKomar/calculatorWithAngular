@@ -3,6 +3,6 @@
     module.exports = function () {
         return {
             restrict: 'E',
-            templateUrl: './js/directives/calculator-keys.html'
+            templateUrl: './scripts/calculator/directives/calculator-keys.html'
         };
     };

@@ -8,13 +8,7 @@
   font: bold 14px Arial, sans-serif;
 }
 
-/* A nice BG gradient */
-html {
-  height: 100%;
-  background: white;
-  background: radial-gradient(circle, #fff 20%, #ccc);
-  background-size: cover;
-}
+
 /* Bootstrap classes overrides */
 
 .container {
