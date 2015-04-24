@@ -1,0 +1,15 @@
+<div class="jumbotron calc-features" ng-controller="FeaturesCtrl">
+    <h1>Main Calculator's features</h1>
+    <dl class="dl-horizontal">
+        <dt ng-repeat-start="feature in features">{{feature.name}}</dt>
+        <dd ng-repeat-end>{{feature.description}}</dd>
+    </dl>
+    <h3>Additional info</h3>
+    <p>Want to get more information just click and get what you are interested in...</p>
+    <div class="list-group">
+        <a href="#/article/{{article.id}}" ng-repeat="article in articles" class="list-group-item">
+            <h4 class="list-group-item-heading">{{article.title}}</h4>
+            <p class="list-group-item-text">{{article.shortText}}</p>
+        </a>
+    </div>
+</div>
